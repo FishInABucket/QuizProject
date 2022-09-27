@@ -2,51 +2,17 @@ import quiz_config
 import quiz_functions
 
 print("===============================================================================================================")
+# executes various functions
 print(quiz_config.intro)
 name = input(quiz_config.give_name)
 print(quiz_config.instructions)
 input(quiz_config.begin)
 print("===============================================================================================================")
 
-# question 1
-quiz_functions.question(1)
-quiz_functions.grading_system(1)
-
-# question 2
-quiz_functions.question(2)
-quiz_functions.grading_system(2)
-
-# question 3
-quiz_functions.question(3)
-quiz_functions.grading_system(3)
-
-# question 4
-quiz_functions.question(4)
-quiz_functions.grading_system(4)
-
-# question 5
-quiz_functions.question(5)
-quiz_functions.grading_system(5)
-
-# question 6
-quiz_functions.question(6)
-quiz_functions.grading_system(6)
-
-# question 7
-quiz_functions.question(7)
-quiz_functions.grading_system(7)
-
-# question 8
-quiz_functions.question(8)
-quiz_functions.grading_system(8)
-
-# question 9
-quiz_functions.question(9)
-quiz_functions.grading_system(9)
-
-# question 10
-quiz_functions.question(10)
-quiz_functions.grading_system(10)
+# runs the question and grading functions for each question number in variable question_nums
+for num in range(1, 11):
+    quiz_functions.question(num)
+    quiz_functions.grading_system(num)
 
 print("\n=============================================================================================================")
 print(f"Congratulations on completing the quiz {name}! Type anything and hit enter to view your results! ")
@@ -57,17 +23,11 @@ print("\n=======================================================================
 print(quiz_config.check_answers)
 print("=============================================================================================================")
 input()
+# checks if the user didn't get a perfect score
 if sum(quiz_functions.score) != 100:
-    quiz_functions.compare_answers(1)
-    quiz_functions.compare_answers(2)
-    quiz_functions.compare_answers(3)
-    quiz_functions.compare_answers(4)
-    quiz_functions.compare_answers(5)
-    quiz_functions.compare_answers(6)
-    quiz_functions.compare_answers(7)
-    quiz_functions.compare_answers(8)
-    quiz_functions.compare_answers(9)
-    quiz_functions.compare_answers(10)
+    # runs the review_incorrect_answers function correcting the user on any question they got wrong
+    for num in range(1, 11):
+        quiz_functions.review_incorrect_answers(num)
 else:
     print(quiz_config.perf_score)
 input("\nEnter any key to continue: ")
