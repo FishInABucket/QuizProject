@@ -7,10 +7,11 @@ intro = "Welcome to my quiz! This quiz will test you on basic knowledge of molec
 give_name = "Please type out your name: "
 
 # Write your instructions below:
-instructions = "\nThere are 10 equally weighted multiple choice questions in this quiz with option choices a, b, and c." \
-               "\nYou may type any character into the response box but once you hit a, b, or c, the quiz will recognise" \
-               "\nthat as your final answer and will not let you change your answer. There is no time limit on this " \
-               "\nquiz. As this quiz is CASE SENSITIVE, capital letters will not be accepted as an answer! Good luck!\n"
+instructions = "\nThere are 10 equally weighted multiple choice questions in this quiz with option choices A, B, and C." \
+               "\nUpon answering a question, press enter to submit your answer. You may change your answer choice for a" \
+               "\nparticular question before hitting Enter for that question. Both capital and lowercase letters are " \
+               "\nacceptable responses and if you accidentally submit an invalid answer choice, the quiz will let you" \
+               "\nresubmit until you pick a valid answer choice. There is no time limit on the quiz, good luck!\n"
 
 # Prompt the user to begin:
 begin = "Type anything and hit enter to begin: "
